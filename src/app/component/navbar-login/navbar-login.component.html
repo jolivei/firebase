@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">Taberna da Calzada</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" routerLink="/inicio" [fragment]="'inicio'">Inicio</a>
+        <a class="nav-item nav-link" routerLink="/inicio" [fragment]="'carta'">Carta</a>
+        <a class="nav-item nav-link" routerLink="/cartalista" >Carta Lista</a>
+        <a class="nav-item nav-link" routerLink="/cartaform" >Fplatos</a>
+        <a class="nav-item nav-link" routerLink="/login" >login</a>
+        <a class="nav-item nav-link" [routerLink]="['inicio']" [fragment]="'bodega'">Bodega</a>
+
+      <a class="nav-item nav-link" style="cursor: pointer;" (click)="logout()">Desconectarse</a>
+      <!-- <a class="nav-item nav-link" >{{user}}</a> -->
+    </div>
+  </div>
+</nav>
+

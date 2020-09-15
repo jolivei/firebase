@@ -1,0 +1,36 @@
+{
+  "hosting": [{ 
+    "target": "tabernaadmin",
+    "public": "dist/taberna",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  { 
+    "target": "taberna",
+    "public": "dist/tabernapublic",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  { 
+    "target": "tabernamenu",
+    "public": "dist/tabernadacalzada",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+  }
+  ]
+}

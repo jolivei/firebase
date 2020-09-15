@@ -1,0 +1,29 @@
+<app-navbar-login ></app-navbar-login>
+<div class="container">
+     <div class="row">
+         <div class="col-md-4 mx-auto" >
+             <div class="card mt-4 text-center">
+                 <div class="card-header">
+                     <h1>Ingresa</h1>
+                 </div>
+                 <div class="card-body">
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="usuario"
+                            formControlName="email">
+
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="contraseña" formControlName="password">
+
+                        </div>
+                        <button type="submit" class="mt-2 btn btn-dark btn-lg btn-block" >
+                            Ingresa
+                          </button>
+                        </form>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+ </div>

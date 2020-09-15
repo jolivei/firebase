@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light bg-light fixed-top ">
+    <a class="navbar-brand" href="#">Taberna da Calzada</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" routerLink="/inicio" [fragment]="'inicio'">Inicio</a>
+        <a class="nav-item nav-link" routerLink="/inicio" [fragment]="'carta'">Carta</a>
+        <a class="nav-item nav-link" [routerLink]="['inicio']" [fragment]="'bodega'">Bodega</a>
+        <!-- <a class="nav-item nav-link" routerLinkActive="active" routerLink = "login" >Login</a> -->
+        <a *ngIf="isLogged" class="nav-item nav-link" ><button  class="btn " (click)="logout()">Desconectarse</button></a>
+        <a class="nav-item nav-link" >{{user}}</a>
+      </div>
+    </div>
+</nav>
+
+<!--   <script>
+    window.sr = ScrollReveal();
+
+    sr.reveal('.navbar', {
+      duration: 2000,
+      origin: 'bottom'
+    });
+
+    sr.reveal('.header-content-left', {
+      duration: 2000,
+      origin: 'top',
+      distance: '300px'
+    });
+
+    sr.reveal('.header-content-right', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px'
+    });
+
+    sr.reveal('.header-btn', {
+      duration: 2000,
+      delay: 1000,
+      origin: 'bottom'
+    });
+
+    sr.reveal('.testimonial ', {
+      duration: 2000,
+      origin: 'left',
+      distance: '500px',
+      //viewFactor: 0.2
+    });
+    sr.reveal('.vinos ', {
+      duration: 2000,
+      origin: 'left',
+      distance: '500px',
+      //viewFactor: 0.2
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script> -->

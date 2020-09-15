@@ -1,0 +1,95 @@
+<app-navbar-login></app-navbar-login>
+ <div class="container mt-2">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Rellena campos</h2>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="cartaForm">
+                        <div class="form-group">
+                          <label for="plato">Nombre plato</label>
+                            <input id="plato" type="tex" class="form-control" placeholder="Nombre plato"
+                                formControlName="nombreplato">
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-3">
+                              <label for="precio">Precio</label>
+                                <input id="precio" type="number" class="form-control" placeholder="Precio" formControlName="precio">
+
+                            </div>
+                            <!-- <div class="form-group col-sm-3">
+                              <label for="">Fecha creacion</label>
+                                <div class="input-group date">
+
+                                    <input type="date" class="form-control" placeholder="Creado" formControlName="creado">
+                                </div>
+
+
+                            </div> -->
+                            <div class="form-group mt-5 col-sm-3 text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="disponible"
+                                        formControlName="disponible">
+                                    <label class="form-check-label" for="disponible">
+                                        disponible
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <!-- <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="carta"
+                                        formControlName="eliminar">
+                                    <label class="form-check-label" for="carta">
+                                        Eliminar carta
+                                    </label>
+                                </div> -->
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-3">
+                                <label for="tipo">Tipo</label>
+                                <select id="tipo" class="form-control" formControlName="tipo"    >
+                                    <option *ngFor="let tipo of tipos" >{{tipo}}</option>
+                                </select>
+                            </div>
+                            hhh
+                            <div class="form-group col-sm-6">
+                                <label for="Categoria">Categoria</label>
+                                <select formControlName="categoria" id="categoria" class="form-control">
+
+                                    <option *ngFor="let cat of categoriaPlatos">{{cat}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="comment">Descripcion:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                              </div>
+                        </div>
+                        <button class="btn btn-block" (click)="enviar()">Enviar</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<!--<form>
+    <h4>mat-select</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Favorite food</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="food">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p> Selected food: {{selectedValue}} </p>
+</form> -->

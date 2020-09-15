@@ -1,0 +1,20 @@
+{
+  "targets": {
+    "tabernadacalzada": {
+      "hosting": {
+        "admin": [
+          "tabernadacalzadaadmin"
+        ],
+        "taberna": [
+          "tabernadacalzada"
+        ],
+        "tabernamenu": [
+          "tabernadacalzada-menu"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tabernadacalzada"
+  }
+}
